@@ -2,9 +2,12 @@
 
 A full-stack Online Examination System built with MERN Stack (MongoDB, Express, React, Node.js).
 Supports both Admin and User (Examinee) roles for smooth exam preparation and management.
+------
 
 ✨ Features
-👨‍💼 Admin-----------
+
+👨‍💼 Admin
+-----
 
 🔐 Admin Authentication (secure login/logout)
 
@@ -20,7 +23,8 @@ Supports both Admin and User (Examinee) roles for smooth exam preparation and ma
 
 🔑 Change Password & Logout
 
-👨‍🎓 User (Examinee)----------------
+👨‍🎓 User (Examinee)
+------
 
 🔑 User Authentication & Login
 
@@ -35,6 +39,7 @@ Supports both Admin and User (Examinee) roles for smooth exam preparation and ma
 🔒 Secure Session Handling
 
 🚀 Tech Stack
+------
 
 Frontend:
 
@@ -77,6 +82,7 @@ Render / Railway / Heroku (Backend) ☁️
 MongoDB Atlas (Database)
 
 📂 Project Structure
+-------
 
 
      ExamPrep/
