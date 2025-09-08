@@ -21,8 +21,9 @@ const Examination = () => {
     const fetchData = async () => {
       try {
         const [subjectRes, sessionRes] = await Promise.all([
-          axios.get('http://localhost:5000/api/subject'),
-          axios.get('http://localhost:5000/api/session'),
+        axios.get(`${process.env.REACT_APP_API_URL}/subject`);
+axios.get(`${process.env.REACT_APP_API_URL}/session`);
+
         ]);
         setSubjects(subjectRes.data.data || []);
         setSessions(sessionRes.data.data || []);
@@ -91,7 +92,8 @@ const Examination = () => {
     }
 
     try {
-      await axios.post('http://localhost:5000/api/exams', formData);
+    await axios.post(`${process.env.REACT_APP_API_URL}/exams`, formData);
+
       alert('Exam Created Successfully');
       // Reset form
       setFormData({
