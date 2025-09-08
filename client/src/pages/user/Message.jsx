@@ -17,7 +17,7 @@ const Message = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/message', formData);
+const response = await axios.post(`${process.env.REACT_APP_API_URL}/message`, formData);
             alert(response.data.message);
             setFormData({ question: '', email: formData.email });
         } catch (error) {
@@ -30,7 +30,7 @@ const Message = () => {
     const fetchMessages = async () => {
         try {
             const userId = localStorage.getItem('userId');
-            const response = await axios.get(`http://localhost:5000/api/message/${userId}`);
+const response = await axios.get(`${process.env.REACT_APP_API_URL}/message/${userId}`);
             setMessages(response.data.message);
             // console.log(response.data.message);
             
