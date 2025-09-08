@@ -8,7 +8,7 @@ const Report = () => {
     const handlefetch = async()=>{
        try
        {
-         const res = await axios.get('http://localhost:5000/api/exams/report');
+const res = await axios.get(`${process.env.REACT_APP_API_URL}/exams/report`);
          setData(res.data);
         console.log(res.data)
        }catch(er){
