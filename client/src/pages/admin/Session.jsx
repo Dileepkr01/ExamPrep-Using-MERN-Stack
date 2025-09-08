@@ -30,14 +30,14 @@ const handleChange = (e)=>{
     e.preventDefault();
    try{
      if(editForm){
-      const res = await axios.put(`http://localhost:5000/api/session/${id.id}`,form)
+const res = await axios.put(`${process.env.REACT_APP_API_URL}/session/${id.id}`, form);
         if(res){
           alert('Session Updated Successfully')
           handlefetch();
         }
      }
      else{
-      const res = await axios.post('http://localhost:5000/api/session',form)
+const res = await axios.post(`${process.env.REACT_APP_API_URL}/session`, form);
         if(res){
           alert('Session Added Successfully')
           handlefetch();
@@ -51,7 +51,7 @@ const handleChange = (e)=>{
   }
   // fetch data api
   const handlefetch = async()=>{
-    const res = await axios.get('http://localhost:5000/api/session')
+const res = await axios.get(`${process.env.REACT_APP_API_URL}/session`);
     // console.log(res.data);
     setData(res.data.data);
   }
@@ -62,7 +62,7 @@ const handleChange = (e)=>{
 //  handle delete logic
 const handleDelete = async (id)=>{
   // console.log(id)
-  const res = await axios.delete(`http://localhost:5000/api/session/${id}`);
+const res = await axios.delete(`${process.env.REACT_APP_API_URL}/session/${id}`);
   if(res){
     alert("Deleted successfully")
   }else{
