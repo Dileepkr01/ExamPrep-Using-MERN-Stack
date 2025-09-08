@@ -17,7 +17,7 @@ const ChangePassword = () => {
     e.preventDefault();
     try
     {
-    const res = await axios.put(`http://localhost:5000/api/examinee/change/${userId}`,data);
+const res = await axios.put(`${process.env.REACT_APP_API_URL}/examinee/change/${userId}`, data);
     if(res){
         alert(res.data.message);
         if(res.data.message === "Password Changed Successfully"){
