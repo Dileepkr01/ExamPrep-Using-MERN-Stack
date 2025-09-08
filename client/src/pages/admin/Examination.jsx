@@ -21,8 +21,13 @@ const Examination = () => {
     const fetchData = async () => {
       try {
         const [subjectRes, sessionRes] = await Promise.all([
+<<<<<<< HEAD
           axios.get(`${process.env.REACT_APP_API_URL}/subject`),
           axios.get(`${process.env.REACT_APP_API_URL}/session`)
+=======
+        axios.get(`${process.env.REACT_APP_API_URL}/subject`),
+axios.get(`${process.env.REACT_APP_API_URL}/session`)
+>>>>>>> 36d26532aa8e52885518dd1ba38df2e6f8f072fe
 
         ]);
         setSubjects(subjectRes.data.data || []);
