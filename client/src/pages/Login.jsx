@@ -89,7 +89,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:5000/api/examinee/login', data);
+            const res = await axios.post(`${process.env.REACT_APP_API_URL}/examinee/login`, data);
             if (res.data.message === "Login Successfully") {
                 localStorage.setItem("userRole", res.data.user.role);
                 localStorage.setItem("userEmail", res.data.user.email);
