@@ -147,7 +147,8 @@ const Registration = () => {
   const [sessions, setSessions] = useState([]);
   const handlefetch = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/session");
+    const res = await axios.get(`${process.env.REACT_APP_API_URL}/session`);
+
       // console.log(res.data);
       setSessions(res.data.data)
     }
@@ -169,7 +170,8 @@ const Registration = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/examinee', formData)
+   const res = await axios.post(`${process.env.REACT_APP_API_URL}/examinee`, formData);
+
       alert('Examinee Registration!');
       setFormData({
         name: '',
