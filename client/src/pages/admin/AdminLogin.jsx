@@ -101,7 +101,8 @@ const AdminLogin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         // console.log(form);
-        const res = await axios.post('http://localhost:5000/api/admin/login', form);
+   const res = await axios.post(`${process.env.REACT_APP_API_URL}/admin/login`, form);
+
 
         // console.log(res.data.message);
         if (res.data.message == "Login Successfully") {
