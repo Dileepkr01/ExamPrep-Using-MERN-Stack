@@ -16,7 +16,7 @@ const email = localStorage.getItem('userEmail');
   useEffect(() => {
     const fetchExam = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/exams/exam/${examId}`);
+const res = await axios.get(`${process.env.REACT_APP_API_URL}/exams/exam/${examId}`);
         const { exam: examData, questions: questionData } = res.data;
         setExam(examData);
         setQuestions(questionData);
@@ -61,11 +61,12 @@ const email = localStorage.getItem('userEmail');
         if (submitted) return; // Prevent multiple submissions
 
         try {
-            const res = await axios.post('http://localhost:5000/api/exams/submit-exam', {
-                examId,
-                answers,
-                email,
-            });
+        const res = await axios.post(`${process.env.REACT_APP_API_URL}/exams/submit-exam`, {
+    examId,
+    answers,
+    email,
+});
+
             setResult(res.data);
             setSubmitted(true);
             alert("Your Exam was submitted successfully. Result will be declared soon.");
