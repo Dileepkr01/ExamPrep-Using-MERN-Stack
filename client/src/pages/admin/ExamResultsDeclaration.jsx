@@ -20,7 +20,8 @@ const ExamResultsDeclaration = ({ exams }) => {
   };
   const [data, setData] = useState([]);
   const handlefetch = async () => {
-    const res = await axios.get('http://localhost:5000/api/exams/examination')
+  const res = await axios.get(`${process.env.REACT_APP_API_URL}/exams/examination`);
+
     setData(res.data.message);
     console.log(res)
   }
