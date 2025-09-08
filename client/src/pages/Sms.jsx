@@ -7,17 +7,18 @@ const Sms = () => {
   const [response, setResponse] = useState('');
 
   const sendSms = async () => {
-    try {
-      const res = await axios.post('http://localhost:5000/api/sms/', {
-        mobile,
-        message,
-      });
-      setResponse(res.data.data);
-    } catch (error) {
-      setResponse("Failed to send SMS");
-      console.error(error);
-    }
-  };
+  try {
+    const res = await axios.post(`${process.env.REACT_APP_API_URL}/sms/`, {
+      mobile,
+      message,
+    });
+    setResponse(res.data.data);
+  } catch (error) {
+    setResponse("Failed to send SMS");
+    console.error(error);
+  }
+};
+
 
   return (
     <div style={{ padding: 20 }}>
