@@ -24,7 +24,8 @@ const QuestionBank = () => {
     e.preventDefault();
     // setQuestions([...questions, formData]);
     try{
-        const res = await axios.post('http://localhost:5000/api/question',formData)
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/question`, formData);
+
         if(res){
             alert("Question Added Successfully")
         }
@@ -46,10 +47,12 @@ const QuestionBank = () => {
 
   const [data , setData] = useState([])
   const handlefetch = async()=>{
-    const res = await axios.get('http://localhost:5000/api/question')
+const res = await axios.get(`${process.env.REACT_APP_API_URL}/question`);
+
     setData(res.data.data)
     
-    const res1 = await axios.get('http://localhost:5000/api/subject')
+const res1 = await axios.get(`${process.env.REACT_APP_API_URL}/subject`);
+
     setSubjects(res1.data.data)
   }
 useEffect(()=>{
