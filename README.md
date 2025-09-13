@@ -7,7 +7,7 @@ Supports both Admin and User (Examinee) roles for smooth exam preparation and ma
 ✨ Features
 
 👨‍💼 Admin
------
+------
 
 🔐 Admin Authentication (secure login/logout)
 
