@@ -48,7 +48,7 @@ React.js ⚛️
 React Router
 
 Bootstrap 5
-
+------
 Backend:
 
 Node.js 🌐
