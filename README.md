@@ -74,7 +74,7 @@ Nodemon
 Concurrently (to run frontend + backend together)
 
 Deployment:
-
+-------
 Netlify (Frontend) 🌍
 
 Render / Railway / Heroku (Backend) ☁️
