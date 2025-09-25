@@ -2,7 +2,7 @@
 
 A full-stack Online Examination System built with MERN Stack (MongoDB, Express, React, Node.js).
 Supports both Admin and User (Examinee) roles for smooth exam preparation and management.
--------
+------
 
 ✨ Features
 
